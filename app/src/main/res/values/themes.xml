@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Тема приложения, наследующаяся от Material3 DayNight без ActionBar -->
+    <style name="Theme.WorkoutTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Здесь можно переопределять цвета, если нужно -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>
