@@ -28,11 +28,12 @@ fun saveTrainings(context: Context, trainings: List<Training>) {
     val file = File(context.filesDir, "trainings.json")
     val jsonArr = JSONArray()
     trainings.forEach { tr ->
-        val obj = JSONObject()
-        obj.put("date", tr.date.toString())
-        obj.put("time", tr.time.toString())
-        obj.put("durationMin", tr.durationMin)
-        obj.put("type", tr.type.name)
+        val obj = JSONObject().apply {
+            put("date", tr.date.toString())
+            put("time", tr.time.toString())
+            put("durationMin", tr.durationMin)
+            put("type", tr.type.name)
+        }
         jsonArr.put(obj)
     }
     file.writeText(jsonArr.toString())
